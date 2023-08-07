@@ -5,21 +5,21 @@
 class Remindme < Formula
   desc ""
   homepage "https://github.com/n0rdy/remindme"
-  version "1.0.1"
+  version "1.0.2"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.1/remindme_Darwin_x86_64.tar.gz"
-      sha256 "6722b3b8ab62f94fac8117e380cf6889beaa60322fb8013facbe25b0e7af7721"
+      url "https://github.com/n0rdy/remindme/releases/download/v1.0.2/remindme_Darwin_x86_64.tar.gz"
+      sha256 "75b705931885f181d0b1c1670761410e4ca395eb89c895295136ffa92e0554d9"
 
       def install
         bin.install "remindme"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.1/remindme_Darwin_arm64.tar.gz"
-      sha256 "c59acac58f44dbb103d31feeb2572e4444cdd248e1d84b48a30724d445418408"
+      url "https://github.com/n0rdy/remindme/releases/download/v1.0.2/remindme_Darwin_arm64.tar.gz"
+      sha256 "cd14e29abb5d2f13590d29ee7fdcbe2e66d5ab73e6740e6d5adc1747a651fcdc"
 
       def install
         bin.install "remindme"
@@ -28,17 +28,17 @@ class Remindme < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.1/remindme_Linux_arm64.tar.gz"
-      sha256 "d1cebe5ed25047754d077bc87a868be2459be3f06533cd8e555ea1d65956843a"
+    if Hardware::CPU.intel?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.0.2/remindme_Linux_x86_64.tar.gz"
+      sha256 "5ec547a3d89eba012cf19d897700d7a3012253fe9d42018389a244181a0ccaef"
 
       def install
         bin.install "remindme"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.1/remindme_Linux_x86_64.tar.gz"
-      sha256 "8ab8e625e4e1237d6ecd4d3519b4258151cbe83e7dcde1048a6ed142665699c2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.0.2/remindme_Linux_arm64.tar.gz"
+      sha256 "1967d8410d0ce74c206f6631b42b1ab9b69c902cc8b68f71791fb7fde0500ea4"
 
       def install
         bin.install "remindme"
