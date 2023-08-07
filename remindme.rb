@@ -5,21 +5,21 @@
 class Remindme < Formula
   desc ""
   homepage "https://github.com/n0rdy/remindme"
-  version "1.0.2"
+  version "1.0.3"
   license "GPL-3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.2/remindme_Darwin_x86_64.tar.gz"
-      sha256 "75b705931885f181d0b1c1670761410e4ca395eb89c895295136ffa92e0554d9"
+    if Hardware::CPU.arm?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.0.3/remindme_Darwin_arm64.tar.gz"
+      sha256 "9571d5b10347536f658c8bf282fe3decd47f17859ebda807dc325717452455c1"
 
       def install
         bin.install "remindme"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.2/remindme_Darwin_arm64.tar.gz"
-      sha256 "cd14e29abb5d2f13590d29ee7fdcbe2e66d5ab73e6740e6d5adc1747a651fcdc"
+    if Hardware::CPU.intel?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.0.3/remindme_Darwin_x86_64.tar.gz"
+      sha256 "5b29daa187ce8dd4bb479175d7aa6d58e7bb8828af08e01af260f25ee0075806"
 
       def install
         bin.install "remindme"
@@ -28,17 +28,17 @@ class Remindme < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.2/remindme_Linux_x86_64.tar.gz"
-      sha256 "5ec547a3d89eba012cf19d897700d7a3012253fe9d42018389a244181a0ccaef"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.0.3/remindme_Linux_arm64.tar.gz"
+      sha256 "f8895305993bb85122e0be25564dc13d7f3e2d1f4b2280e5c335a35037c72e20"
 
       def install
         bin.install "remindme"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.2/remindme_Linux_arm64.tar.gz"
-      sha256 "1967d8410d0ce74c206f6631b42b1ab9b69c902cc8b68f71791fb7fde0500ea4"
+    if Hardware::CPU.intel?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.0.3/remindme_Linux_x86_64.tar.gz"
+      sha256 "87232db3bb77c5ed8a821792c334ba4ab6e9e75f71bc1530f752f7fb2f295990"
 
       def install
         bin.install "remindme"
