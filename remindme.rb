@@ -5,21 +5,21 @@
 class Remindme < Formula
   desc ""
   homepage "https://github.com/n0rdy/remindme"
-  version "1.0.11"
+  version "1.1.0"
   license "GPL-3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.11/remindme_Darwin_x86_64.tar.gz"
-      sha256 "79b518a3167d4423f5e2cecfa9d742b150d8918e07844e0c5ce73301f043b485"
+    if Hardware::CPU.arm?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.1.0/remindme_Darwin_arm64.tar.gz"
+      sha256 "a4a9f1976dfd53b8dcd7e005f5bae34810009cb4be51dfbac0cdde8fd299b445"
 
       def install
         bin.install "remindme"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.11/remindme_Darwin_arm64.tar.gz"
-      sha256 "dd591d8e107fe3f33a17ddf23a47b96ef08bf028438a12b06f04182414e28e41"
+    if Hardware::CPU.intel?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.1.0/remindme_Darwin_x86_64.tar.gz"
+      sha256 "aaebb9e690361c122d9a68198bed3619810680204d924a70a4a07851e251c897"
 
       def install
         bin.install "remindme"
@@ -28,17 +28,17 @@ class Remindme < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.11/remindme_Linux_arm64.tar.gz"
-      sha256 "c3cd93ea6df955f86d6799762d68c8d8b4f4dda06fb9dca63d4838dbab8c8db9"
+    if Hardware::CPU.intel?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.1.0/remindme_Linux_x86_64.tar.gz"
+      sha256 "ad643adfcbb1e19727c05dbd1cdac4b17eb002d7a5b77ee436656f0421161a6f"
 
       def install
         bin.install "remindme"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/n0rdy/remindme/releases/download/v1.0.11/remindme_Linux_x86_64.tar.gz"
-      sha256 "157521e7c47054a3d8eedd3bc2adcbab4f58993e7b4a96046eb73d2bdeaf10a8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/n0rdy/remindme/releases/download/v1.1.0/remindme_Linux_arm64.tar.gz"
+      sha256 "b6574c85914236a91185738e35a1eefd6e4cf3f3ab6c6fbac5684f15a2b50d36"
 
       def install
         bin.install "remindme"
