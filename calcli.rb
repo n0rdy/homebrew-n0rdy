@@ -5,21 +5,21 @@
 class Calcli < Formula
   desc ""
   homepage "https://github.com/n0rdy/calcli"
-  version "0.0.2"
+  version "0.0.3"
   license "AGPL-3.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/n0rdy/calcli/releases/download/v0.0.2/calcli_Darwin_x86_64.tar.gz"
-      sha256 "78ed1aec1d6a74b08a77bc5a49d601b0691112eedf42b94732d6ab8b20133a00"
+      url "https://github.com/n0rdy/calcli/releases/download/v0.0.3/calcli_Darwin_x86_64.tar.gz"
+      sha256 "227d0708c2fe369e24d1f5459389e7311a7312420755bd09661d0a45affadac3"
 
       def install
         bin.install "calcli"
       end
     end
     on_arm do
-      url "https://github.com/n0rdy/calcli/releases/download/v0.0.2/calcli_Darwin_arm64.tar.gz"
-      sha256 "f3807b3d47aab425a5b9ffe9bb4641f5d72f56d0152f9944a3a9625609394407"
+      url "https://github.com/n0rdy/calcli/releases/download/v0.0.3/calcli_Darwin_arm64.tar.gz"
+      sha256 "5f0db43439b78b45323aeae22a485701b0546311893c5df7fba8d475b4bbab71"
 
       def install
         bin.install "calcli"
@@ -30,8 +30,8 @@ class Calcli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/n0rdy/calcli/releases/download/v0.0.2/calcli_Linux_x86_64.tar.gz"
-        sha256 "2deca08dc2de52c5132835ea8c2366a517a7afa93a3d31c275ad6a769730e9d2"
+        url "https://github.com/n0rdy/calcli/releases/download/v0.0.3/calcli_Linux_x86_64.tar.gz"
+        sha256 "37f416771e523e72b014c92ffe97364a75e17641f74529529fe74edf374f3b32"
 
         def install
           bin.install "calcli"
@@ -40,8 +40,8 @@ class Calcli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/n0rdy/calcli/releases/download/v0.0.2/calcli_Linux_arm64.tar.gz"
-        sha256 "e4d7f6e5d8df44ed7c8d2e0ee1453236a1249c1f11718c2d735634c3ac0e4281"
+        url "https://github.com/n0rdy/calcli/releases/download/v0.0.3/calcli_Linux_arm64.tar.gz"
+        sha256 "aa5dca7913b2e5393522a79fce5ddc6eb8a67e301c4cbcb07d64b2fe5ec81123"
 
         def install
           bin.install "calcli"
