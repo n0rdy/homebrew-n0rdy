@@ -1,6 +1,6 @@
 cask "nordyg" do
-  version "0.0.1"
-  sha256 "68fb509df9c41cb543f255854e47c778ea9b1e1070620d55888708856f25207b"
+  version "0.0.2"
+  sha256 "8f4a9da6c7a036d421fb186078d478bd66d415d79aa9471ce7b9d51e97cb3b62"
 
   url "https://github.com/n0rdy/nordyg/releases/download/v#{version}/Nordyg-#{version}.dmg"
   name "Nordyg"
